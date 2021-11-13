@@ -49,7 +49,7 @@ const HistogramChart = (props: Props) => {
       type: "bin.histogram",
       field: "valor",
       binWidth,
-      as: ["valor", "quantidade"]
+      as: ["valor", "cantidad"]
     })
   }, [data, binWidth])
 
@@ -70,9 +70,9 @@ const HistogramChart = (props: Props) => {
           autoRotate: false
         }}
       />
-      {title ? <Axis title name="quantidade" /> : <Axis name="quantidade" />}
+      {title ? <Axis title name="cantidad" /> : <Axis name="cantidad" />}
       <Tooltip shared /* inPlot={false} position={"top"} */ />
-      <Interval position="valor*quantidade" color={fill || "#7AC0A7"} />
+      <Interval position="valor*cantidad" color={fill || "#7AC0A7"} />
     </Chart>
   </>
 }
