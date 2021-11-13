@@ -31,7 +31,7 @@ const BarPizzaChartCard = (props: Props) => {
 
   const { fill, title, data, style, maxBarsPerPage,
     usePercentage, extra, changeGraph = true, graphType = "BARCHART",
-    axis = ["Tipo", "Quantidade"]
+    axis = ["Tipo", "Cantidad"]
   } = props;
 
   const [dataUsePercentage, setDataUsePercentage] = React.useState(false)
@@ -51,14 +51,14 @@ const BarPizzaChartCard = (props: Props) => {
   const data2: ContTypeWithPercentage[] = data
   addPercentageDataInContType(data2)
 
-  axis.push("Porcentagem")
+  axis.push("Porcentaje")
 
   return <Card
     title={title}
     style={style}
     extra={<>
       {showPercentageTooltip && <>
-        <Tooltip title={dataUsePercentage ? "Mudar para valores absolutos" : "Mudar para porcentagem"}>
+        <Tooltip title={dataUsePercentage ? "Cambiar a valores absolutos" : "Caambiar a porcentaje"}>
           <Button
             shape={"circle"}
             size={"small"}
