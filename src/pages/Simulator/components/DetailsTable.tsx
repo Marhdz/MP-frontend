@@ -45,19 +45,19 @@ export default function DetailsTable(props: DetailsTableProps) {
       key: "pageName"
     },
     {
-      title: "Memória",
+      title: "Memoria",
       dataIndex: "memory",
       key: "memory",
       render: (memory: Page[], record: TableData) => <MemoryRender memory={memory} record={record} />
     },
     {
-      title: "Página presente?",
+      title: "Fault",
       dataIndex: "fault",
       key: "fault",
       render: (fault: boolean) => fault === undefined ? null : fault ? <CloseCircleOutlined style={{ color: "red" }} /> : <CheckCircleOutlined style={{ color: "green" }} />,
     },
     {
-      title: "Ação",
+      title: "Acción",
       dataIndex: "action",
       key: "action"
     },
