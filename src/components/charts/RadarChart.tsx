@@ -11,10 +11,10 @@ const RadarChart = (props: {
 }) => {
 
   const data = [
-    { item: "Geral", score: props.data.total || 0 },
-    { item: "Preço", score: (props.data.price && props.data.price.value) || 0 },
-    { item: "Localização", score: (props.data.location && props.data.location.value) || 0 },
-    { item: "Adicionais", score: (props.data.extraFeatures && props.data.extraFeatures.value) || 0 },
+    { item: "General", score: props.data.total || 0 },
+    { item: "Precio", score: (props.data.price && props.data.price.value) || 0 },
+    { item: "Ubicación", score: (props.data.location && props.data.location.value) || 0 },
+    { item: "Extras", score: (props.data.extraFeatures && props.data.extraFeatures.value) || 0 },
     { item: "Área", score: (props.data.area && props.data.area.value) || 0 }
   ]
 
