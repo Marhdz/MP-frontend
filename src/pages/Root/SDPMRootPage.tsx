@@ -47,12 +47,7 @@ export default function SDPMRootPage() {
   return <>
     <BrowserRouter>
       <Layout style={{ height: "100vh", overflow: "auto", backgroundColor: "white" }}>
-        <Header>
-          <div style={{ float: "left", fontSize: "20px", marginRight: "10px" }}><NavLink to="/" style={{ color: "#DDD" }}>Simulador</NavLink></div>
-          <Menu theme="dark" mode="horizontal" overflowedIndicator={<MenuOutlined />} defaultSelectedKeys={[actualRoute || "simulator"]}>
-            {allLinks}
-          </Menu>
-        </Header>
+        
         <Content>
           <Switch>
             {allRoutes}
