@@ -41,7 +41,7 @@ const PizzaChart = (props: PizzaChartProps) => {
           "percentage",
           (percentage) => {
             return {
-              name: "Porcentagem",
+              name: "Porcentaje",
               value: percentage + suffix
             };
           }
@@ -49,7 +49,7 @@ const PizzaChart = (props: PizzaChartProps) => {
             "cont",
             (count) => {
               return {
-                name: "Quantidade",
+                name: "Cantidad",
                 value: count + suffix
               };
             }
