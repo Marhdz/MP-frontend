@@ -11,7 +11,7 @@ import SimulationForm from "./components/SimulationForm";
 import SimulationSteps from "./components/SimulationSteps";
 
 export default function AboutAlgorithmsPage() {
-  document.title = "SDPM - Simulador Didático de Paginação de Memória"
+  document.title = "Simulador de memoria principal"
   const [form] = Form.useForm();
   const [currentStep, setCurrentStep] = useState<number>(0)
   const [simulationResponse, setSimulationResponse] = useState<SimulationResponse>({})
@@ -30,7 +30,7 @@ export default function AboutAlgorithmsPage() {
         setCurrentStep(2)
       } else {
         notification.open({
-          message: "Ocorreu um erro durante a simulação.",
+          message: "Ocurrió un error durante la simulación.",
           description: response.data.message,
           type: "error"
         });
@@ -39,7 +39,7 @@ export default function AboutAlgorithmsPage() {
     } catch (error) {
       console.log(error)
       notification.open({
-        message: "Ocorreu um erro durante a simulação.",
+        message: "Ocurrió un error durante la simulación.",
         description: `Erro: ${getMessageFromError(error)}`,
         type: "error"
       });
@@ -73,8 +73,8 @@ export default function AboutAlgorithmsPage() {
       <Result
         status="info"
         icon={<SyncOutlined spin />}
-        title="Simulando... Por favor aguarde"
-        subTitle="Isso pode levar algum tempo."
+        title="Simulando... Por favor espere"
+        subTitle="Esto puede tomar un momento."
       />
     </Row>}
 
