@@ -1,7 +1,7 @@
 export const algorithmList = [
   {
     name: "optimalAlgorithm",
-    label: "Algoritmo Ótimo"
+    label: "Algoritmo Óptimo"
   },
   {
     name: "fifoAlgorithm",
@@ -9,7 +9,7 @@ export const algorithmList = [
   },
   {
     name: "secondChanceAlgorithm",
-    label: "Algoritmo Segunda Chance"
+    label: "Algoritmo Segunda Oportunidad"
   },
   {
     name: "lruAlgorithm",
