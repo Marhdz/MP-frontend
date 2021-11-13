@@ -58,9 +58,9 @@ export default function SimulationForm(props: SimulationFormProps) {
 
   const testCasesMenu = (
     <Menu selectedKeys={[selectedTestCase]} onClick={(e) => setSelectedTestCase(e.key)} >
-      <Menu.Item key="testCase1" >Caso de teste 1</Menu.Item>
-      <Menu.Item key="testCase2" >Caso de teste 2</Menu.Item>
-      <Menu.Item key="testCase3" >Caso de teste 3</Menu.Item>
+      <Menu.Item key="testCase1" >Caso de prueba 1</Menu.Item>
+      <Menu.Item key="testCase2" >Caso de prueba 2</Menu.Item>
+      <Menu.Item key="testCase3" >Caso de prueba 3</Menu.Item>
     </Menu>
   )
 
@@ -222,7 +222,7 @@ export default function SimulationForm(props: SimulationFormProps) {
     <Form.Item>
       <Space>
         <Button type="primary" htmlType="submit" icon={<ThunderboltOutlined />}>Simular</Button>
-        <Tooltip title={"Casos de teste que foram utilizados para validar o simulador. Selecione um caso de teste no menu (...)"}>
+       
           <Dropdown.Button overlay={testCasesMenu} type="dashed">Usar caso de teste</Dropdown.Button>
         </Tooltip>
         <Button type="dashed" htmlType="button" icon={<SettingOutlined />} onClick={() => setRandomValues(form, setSelectedAlgorithms)}>Gerar dados aleatórios</Button>
