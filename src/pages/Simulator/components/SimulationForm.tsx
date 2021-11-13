@@ -73,31 +73,31 @@ export default function SimulationForm(props: SimulationFormProps) {
     onFinish={handleSubmit}
   >
     <Form.Item
-      label="Tamanho da memória"
+      label="Tamaño de la memoria"
       key="memorySize"
       name="memorySize"
-      tooltip="Quantos processos cabem na memória."
-      rules={[{ required: true, message: "Informe o tamanho da memória" }]}
+      tooltip="Cuántos procesos caben en la memoria."
+      rules={[{ required: true, message: " Ingrese el tamaño de la memoria" }]}
     >
       <InputNumber style={{ width: "100%" }} type="number" />
     </Form.Item>
 
     <Form.Item
-      label="Tamanho da fila de páginas"
+      label="Tamaño de cola de página"
       key="pagesQueueSize"
       name="pagesQueueSize"
-      tooltip="Tamanho da fila de páginas a serem referenciadas."
-      rules={[{ required: true, message: "Informe o tamanho da fila de páginas" }]}
+      tooltip="Tamaño de la cola de páginas a las que se hará referencia."
+      rules={[{ required: true, message: "Ingrese el tamaño de la cola de páginas" }]}
     >
       <InputNumber style={{ width: "100%" }} type="number" />
     </Form.Item>
 
     <Form.Item
-      label="Quantidade de páginas"
+      label="Número de páginas"
       key="numberOfPages"
       name="numberOfPages"
       tooltip="Número de páginas únicas."
-      rules={[{ required: true, message: "Informe o número de páginas únicas" }]}
+      rules={[{ required: true, message: "Ingrese el número de páginas únicas" }]}
     >
       <InputNumber style={{ width: "100%" }} type="number" />
     </Form.Item>
@@ -106,21 +106,21 @@ export default function SimulationForm(props: SimulationFormProps) {
       label="Páginas"
       key="pages"
       name="pages"
-      tooltip="Nomes das páginas."
-      rules={[{ required: true, message: "Informe os nomes das páginas" }]}
+      tooltip="Nombres de páginas."
+      rules={[{ required: true, message: "Ingrese los nombres de las páginas" }]}
     >
       <Select mode="tags" tokenSeparators={[","]} allowClear style={{ width: "100%" }} />
     </Form.Item>
 
     <Form.Item
-      label="Fila de páginas"
+      label="Cola de páginas"
       key="pagesQueue"
       name="pagesQueue"
-      tooltip="Fila de páginas para serem referenciadas."
-      rules={[{ required: true, message: "Informe a fila de páginas para serem referenciadas" }]}
+      tooltip="Cola de páginas a referenciar."
+      rules={[{ required: true, message: "Ingrese la cola de páginas a referenciar" }]}
     >
       <Input addonAfter={
-        <Tooltip title="Gerar automaticamente. Depende dos campos 'Tamanho da fila de páginas' e 'Páginas'.">
+        <Tooltip title="Generar automáticamente. Depende de los campos 'Tamaño de cola de página' y 'Páginas'.">
           <Button
             type="text"
             size="small"
@@ -132,14 +132,14 @@ export default function SimulationForm(props: SimulationFormProps) {
     </Form.Item>
 
     <Form.Item
-      label="Fila de ações"
+      label="Cola de acciones"
       key="actionsQueue"
       name="actionsQueue"
-      tooltip="Fila de ações a serem executadas para cada página (escrita (E) ou leitura (L))."
-      rules={[{ required: true, message: "Informe a fila de ações a serem executadas para cada página (escrita (E) ou leitura (L))" }]}
+      tooltip="Cola de acciones a realizar para cada página (escribir (E) o leer (L))"
+      rules={[{ required: true, message: "Ingrese la cola de acciones a realizar para cada página (escribir (E) o leer (L))" }]}
     >
       <Input addonAfter={
-        <Tooltip title="Gerar automaticamente. Depende do campo 'Tamanho da fila de páginas'.">
+        <Tooltip title="Generar automáticamente. Depende del campo 'Tamaño de cola de página'.">
           <Button
             type="text"
             size="small"
@@ -151,14 +151,14 @@ export default function SimulationForm(props: SimulationFormProps) {
     </Form.Item>
 
     <Form.Item
-      label="Estado inicial da memória"
+      label="Estado inicial de la memoria"
       key="memoryInitalState"
       name="memoryInitalState"
-      tooltip="Páginas que já estão na memória."
-      rules={[{ required: true, message: "Informe as páginas que já estão na memória" }]}
+      tooltip="Páginas que ya están en la memoria."
+      rules={[{ required: true, message: "Ingrese las páginas que ya están en la memoria" }]}
     >
       <Input addonAfter={
-        <Tooltip title="Gerar automaticamente. Depende dos campos 'Tamanho da memória' e 'Páginas'.">
+        <Tooltip title="Generar automáticamente. Depende de los campos 'Tamaño de memoria' y 'Páginas'.">
           <Button
             type="text"
             size="small"
@@ -170,14 +170,14 @@ export default function SimulationForm(props: SimulationFormProps) {
     </Form.Item>
 
     {!!(selectedAlgorithms?.includes("nruAlgorithm") || selectedAlgorithms?.includes("secondChanceAlgorithm") || selectedAlgorithms?.includes("wsClockAlgorithm")) && <Form.Item
-      label="Interrupção do relógio"
+      label="interrupción del reloj"
       key="clockInterruption"
       name="clockInterruption"
-      tooltip="A quantas referências de página haverá uma interrupção do relógio."
-      rules={[{ required: true, message: "Informe a quantas referências de página haverá uma interrupção do relógio" }]}
+      tooltip="¿Cuántas referencias de página habrá en una interrupción del reloj?"
+      rules={[{ required: true, message: "Ingrese cuántas referencias de página habrá una interrupción del reloj" }]}
     >
       <Input addonAfter={
-        <Tooltip title="Gerar automaticamente. Depende do campo 'Tamanho da fila de páginas'.">
+        <Tooltip title="Generar automáticamente. Depende del campo 'Tamaño de cola de página'.">
           <Button
             type="text"
             size="small"
@@ -192,11 +192,11 @@ export default function SimulationForm(props: SimulationFormProps) {
       label="τ (tau)"
       key="tau"
       name="tau"
-      tooltip="Idade máxima para considerar uma página dentro do conjunto de trabalho."
-      rules={[{ required: true, message: "Informe a idade máxima para considerar uma página dentro do conjunto de trabalho" }]}
+      tooltip="Edad máxima para considerar una página dentro del conjunto de trabajo."
+      rules={[{ required: true, message: "Ingrese la edad máxima para considerar una página dentro del conjunto de trabajo" }]}
     >
       <Input addonAfter={
-        <Tooltip title="Gerar automaticamente">
+        <Tooltip title="Generar automáticamente">
           <Button
             type="text"
             size="small"
@@ -211,8 +211,8 @@ export default function SimulationForm(props: SimulationFormProps) {
       label="Algoritmos"
       key="algorithms"
       name="algorithms"
-      tooltip="Algoritmos a serem executados."
-      rules={[{ required: true, message: "Selecione os algoritmos" }]}
+      tooltip="Algoritmos a ejecutar."
+      rules={[{ required: true, message: "Seleccionar algoritmos" }]}
     >
       <Select mode="multiple" style={{ width: "100%" }} defaultValue={algorithmNamesList} onChange={(value: string[]) => setSelectedAlgorithms(value)}>
         {algorithmsOptions}
@@ -223,10 +223,10 @@ export default function SimulationForm(props: SimulationFormProps) {
       <Space>
         <Button type="primary" htmlType="submit" icon={<ThunderboltOutlined />}>Simular</Button>
        
-          <Dropdown.Button overlay={testCasesMenu} type="dashed">Usar caso de teste</Dropdown.Button>
+          <Dropdown.Button overlay={testCasesMenu} type="dashed">Usar caso de prueba</Dropdown.Button>
         </Tooltip>
-        <Button type="dashed" htmlType="button" icon={<SettingOutlined />} onClick={() => setRandomValues(form, setSelectedAlgorithms)}>Gerar dados aleatórios</Button>
-        <Button type="dashed" htmlType="button" icon={<ClearOutlined />} onClick={onReset}>Limpar</Button>
+        <Button type="dashed" htmlType="button" icon={<SettingOutlined />} onClick={() => setRandomValues(form, setSelectedAlgorithms)}>Generar datos aleatorios</Button>
+        <Button type="dashed" htmlType="button" icon={<ClearOutlined />} onClick={onReset}>Limpiar</Button>
       </Space>
     </Form.Item>
   </Form>

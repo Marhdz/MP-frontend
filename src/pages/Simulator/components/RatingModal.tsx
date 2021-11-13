@@ -19,14 +19,14 @@ export default function RatingModal(props: RatingModalProps) {
       const response = await api.post("simulatorRating", data);
       if (response.data.success) {
         notification.open({
-          message: "Avaliação salva com sucesso.",
+          message: "Revisión guardada con éxito.",
           type: "success"
         });
         setRatingModalVisible(false);
         setRated(true);
       } else {
         notification.open({
-          message: "Ocorreu um erro durante a avaliação.",
+          message: "Ocurrió un error durante la evaluación.",
           description: response.data.message,
           type: "error"
         });
@@ -34,7 +34,7 @@ export default function RatingModal(props: RatingModalProps) {
     } catch (error) {
       console.log(error)
       notification.open({
-        message: "Ocorreu um erro durante a avaliação.",
+        message: "Ocurrió un error durante la evaluación.",
         description: `Erro: ${getMessageFromError(error)}`,
         type: "error"
       });
@@ -42,7 +42,7 @@ export default function RatingModal(props: RatingModalProps) {
   }
 
   return <Modal
-    title="Avaliar o simulador"
+    title="Evaluar el simulador"
     visible={ratingModalVisible}
     okText="Enviar"
     cancelText="Cancelar"
@@ -50,10 +50,10 @@ export default function RatingModal(props: RatingModalProps) {
     onOk={() => handleSubmit({ rating, comment })}
   >
     <Form labelAlign="right" labelCol={{ span: 6 }} wrapperCol={{ span: 18 }}>
-      <Form.Item label="Avaliação">
+      <Form.Item label="Evaluación">
         <Rate onChange={value => setRating(value)} />
       </Form.Item>
-      <Form.Item label="Comentários">
+      <Form.Item label="Comentarios">
         <Input.TextArea rows={3} onChange={value => setComment(value.target.value)} />
       </Form.Item>
     </Form>

@@ -21,8 +21,8 @@ export default function GeneralStatistics() {
       .catch(error => {
         setLoading(false);
         notification.open({
-          message: "Ocorreu um erro ao consultar os dados.",
-          description: `Erro: ${getMessageFromError(error)}`,
+          message: "Se produjo un error al consultar los datos.",
+          description: `Error: ${getMessageFromError(error)}`,
           type: "error"
         })
       });
@@ -32,10 +32,10 @@ export default function GeneralStatistics() {
     <Col span={10}>
       <Card bordered={false}>
         <Statistic
-          title="Total de simulações realizadas"
+          title="Total de simulaciones realizadas"
           value={response?.data?.totalOfSimulations}
           prefix={<MonitorOutlined />}
-          suffix={"simulações"}
+          suffix={"simulaciones"}
           loading={loading}
         />
       </Card>
@@ -43,7 +43,7 @@ export default function GeneralStatistics() {
     <Col span={10}>
       <Card bordered={false}>
         <Statistic
-          title="Total de tempo gasto nas simulações realizadas"
+          title="Tiempo total dedicado a las simulaciones realizadas"
           value={formatSimulationTime(response?.data?.totalOfTime || 0).simulationTime}
           prefix={<HourglassOutlined />}
           suffix={formatSimulationTime(response?.data?.totalOfTime || 0).suffix}

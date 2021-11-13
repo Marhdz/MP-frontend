@@ -23,7 +23,7 @@ export default function ResultCard(props: ResultCardProps) {
     <Col span={20}>
       <Card bordered={false}>
         <Statistic
-          title="Tempo de simulação"
+          title="Tiempo de simulación"
           value={formatNumber(simulationTime)}
           prefix={<HourglassOutlined />}
           suffix={suffix}
@@ -31,16 +31,16 @@ export default function ResultCard(props: ResultCardProps) {
       </Card>
     </Col>
     <Col span={20}>
-      <Card bordered={false} title="Total de faltas de página por algoritmo">
+      <Card bordered={false} title="Total de páginas perdidas por algoritmo">
         <Descriptions size="small">
           {result?.algorithmResult?.map(cur => <Descriptions.Item label={pretifyAlgorithmName(cur.name)}>{cur.cont}</Descriptions.Item>)}
         </Descriptions>
         <Divider />
-        <BarChart suffix={"faltas"} axis={faultAxis} data={faultData || []} />
+        <BarChart suffix={"perdidas"} axis={faultAxis} data={faultData || []} />
       </Card>
     </Col>
     {timeData?.length ? <Col span={20}>
-      <Card bordered={false} title="Tempo de execução de cada algoritmo (em milisegundos)">
+      <Card bordered={false} title="Tiempo de ejecución de cada algoritmo (en milisegundos)">
         <Descriptions size="small">
           {result?.algorithmResult?.map(cur => <Descriptions.Item label={pretifyAlgorithmName(cur.name)}>{cur.simulationTime}</Descriptions.Item>)}
         </Descriptions>
@@ -49,21 +49,21 @@ export default function ResultCard(props: ResultCardProps) {
       </Card>
     </Col> : null}
     <Col span={20}>
-      <Card bordered={false} title="Dados usados na simulação">
+      <Card bordered={false} title="Datos utilizados en simulación">
         <Descriptions size="small" labelStyle={{ fontWeight: "bold" }}>
-          <Descriptions.Item label="Tamanho da memória">{simulationData.memorySize}</Descriptions.Item>
-          <Descriptions.Item label="Tamanho da fila de páginas">{simulationData.pagesQueueSize}</Descriptions.Item>
-          <Descriptions.Item label="Quantidade de páginas">{simulationData.numberOfPages}</Descriptions.Item>
+          <Descriptions.Item label="Tamaño de la memoria">{simulationData.memorySize}</Descriptions.Item>
+          <Descriptions.Item label="Tamaño de cola de página">{simulationData.pagesQueueSize}</Descriptions.Item>
+          <Descriptions.Item label="Número de páginas">{simulationData.numberOfPages}</Descriptions.Item>
           <Descriptions.Item label="Páginas">{simulationData.pages?.join("|")}</Descriptions.Item>
-          <Descriptions.Item label="Fila de páginas">{simulationData.pagesQueue}</Descriptions.Item>
-          <Descriptions.Item label="Fila de ações">{simulationData.actionsQueue}</Descriptions.Item>
-          <Descriptions.Item label="Estado inicial da memória">{simulationData.memoryInitalState}</Descriptions.Item>
-          <Descriptions.Item label="Interrupção do relógio">{simulationData.clockInterruption}</Descriptions.Item>
+          <Descriptions.Item label="Cola de páginas">{simulationData.pagesQueue}</Descriptions.Item>
+          <Descriptions.Item label="Cola de acciones">{simulationData.actionsQueue}</Descriptions.Item>
+          <Descriptions.Item label="Estado inicial de la memoria">{simulationData.memoryInitalState}</Descriptions.Item>
+          <Descriptions.Item label="Interrupción del reloj">{simulationData.clockInterruption}</Descriptions.Item>
           <Descriptions.Item label="τ (tau)">{simulationData.tau}</Descriptions.Item>
           <Descriptions.Item label="Algoritmos">{simulationData.algorithms?.map(cur => pretifyAlgorithmName(cur)).join(", ")}</Descriptions.Item>
         </Descriptions>
       </Card>
-      {result?.shouldShowDetails ? <Card bordered={false} title="Detalhamento da execução dos algoritmos">
+      {result?.shouldShowDetails ? <Card bordered={false} title="Detalles de la ejecución de los algoritmos">
         <Collapse accordion ghost >
           {result?.algorithmResult?.map((cur, i) => <Collapse.Panel header={pretifyAlgorithmName(cur.name)} key={i} >
             <DetailsTable simulationExecution={cur.simulationExecution} />

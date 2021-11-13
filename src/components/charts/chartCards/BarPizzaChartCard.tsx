@@ -58,7 +58,7 @@ const BarPizzaChartCard = (props: Props) => {
     style={style}
     extra={<>
       {showPercentageTooltip && <>
-        <Tooltip title={dataUsePercentage ? "Cambiar a valores absolutos" : "Caambiar a porcentaje"}>
+        <Tooltip title={dataUsePercentage ? "Cambiar a valores absolutos" : "Cambiar a porcentaje"}>
           <Button
             shape={"circle"}
             size={"small"}
