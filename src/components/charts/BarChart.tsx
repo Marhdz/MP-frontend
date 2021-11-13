@@ -69,15 +69,15 @@ const BarChart = (props: Props) => {
           `percentage`,
           (percentage) => {
             return {
-              name: "Porcentagem",
+              name: "Porcentaje",
               value: percentage + suffix
             };
           }
         ] : [
-          `${yAxisName}`, // "Quantidade" axis
+          `${yAxisName}`, // "Cantidad" axis
           (count) => {
             return {
-              name: "Quantidade",
+              name: "Cantidad",
               value: count + suffix
             };
           }
