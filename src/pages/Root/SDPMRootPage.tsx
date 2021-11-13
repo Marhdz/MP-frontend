@@ -38,8 +38,8 @@ export default function SDPMRootPage() {
       render={() => <Result
         status="404"
         title="404"
-        subTitle="Desculpe, essa página não existe."
-        extra={<Button type="primary"><NavLink to="/" >Voltar para a página inicial</NavLink></Button>}
+        subTitle="La página que buscas no existe."
+        extra={<Button type="primary"><NavLink to="/" >Volver al inicio</NavLink></Button>}
       />}
     />,
   ]
@@ -48,7 +48,7 @@ export default function SDPMRootPage() {
     <BrowserRouter>
       <Layout style={{ height: "100vh", overflow: "auto", backgroundColor: "white" }}>
         <Header>
-          <div style={{ float: "left", fontSize: "20px", marginRight: "10px" }}><NavLink to="/" style={{ color: "#DDD" }}>SDPM</NavLink></div>
+          <div style={{ float: "left", fontSize: "20px", marginRight: "10px" }}><NavLink to="/" style={{ color: "#DDD" }}>Simulador</NavLink></div>
           <Menu theme="dark" mode="horizontal" overflowedIndicator={<MenuOutlined />} defaultSelectedKeys={[actualRoute || "simulator"]}>
             {allLinks}
           </Menu>
