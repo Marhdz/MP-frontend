@@ -222,9 +222,9 @@ export default function SimulationForm(props: SimulationFormProps) {
     <Form.Item>
       <Space>
         <Button type="primary" htmlType="submit" icon={<ThunderboltOutlined />}>Simular</Button>
-       <Tooltip>
-          <Dropdown.Button overlay={testCasesMenu} type="dashed">Usar caso de prueba</Dropdown.Button>
-        </Tooltip>
+       
+        <Dropdown.Button overlay={testCasesMenu} type="dashed">Usar caso de prueba</Dropdown.Button>
+       
         <Button type="dashed" htmlType="button" icon={<SettingOutlined />} onClick={() => setRandomValues(form, setSelectedAlgorithms)}>Generar datos aleatorios</Button>
         <Button type="dashed" htmlType="button" icon={<ClearOutlined />} onClick={onReset}>Limpiar</Button>
       </Space>
