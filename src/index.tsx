@@ -1,7 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom";
 import reportWebVitals from "./reportWebVitals";
-import SDPMRootPage from "./pages/Root/SDPMRootPage";
 require("dotenv").config();
 
 ReactDOM.render(<SDPMRootPage/>, document.getElementById("root"));
